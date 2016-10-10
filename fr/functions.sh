@@ -6,4 +6,5 @@ jarvis_gmail () {
         echo "Vous avez $nb emails non lus"
     else
         echo "Vous n'avez aucun email non lu"
+    fi
 }
