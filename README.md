@@ -1,14 +1,25 @@
 <!---
-Do not update this file
-The description of your plugin is written when publishing on the store
-IMPORTANT: Make sure to rename the [en] folder into the language code your plugin is written in (ex: fr, es, de, it...)
-Or copy it for a multi-language plugin
+IMPORTANT
+=========
+This README.md is displayed in the WebStore as well as within Jarvis app
+Please do not change the structure of this file
+Fill-in Description, Usage & Author sections
+Make sure to rename the [en] folder into the language code your plugin is written in (ex: fr, es, de, it...)
+For multi-language plugin:
+- clone the language directory and translate commands/functions.sh
+- optionally write the Description / Usage sections in several languages
 -->
-This is a plugin for [Jarvis](https://github.com/alexylem/jarvis)
-It augments what Jarvis can understand and execute
+## Description
+Tells you number of unread emails you have on your gmail account.
 
-Learn how to create & publish your own plugin on the Jarvis store:  
-http://domotiquefacile.fr/jarvis/content/publish-your-plugin
+## Usage
+```
+You: Vérifie mes emails
+Jarvis: Vous avez 2 emails non lus
 
-See other plugins on the Jarvis store:  
-http://domotiquefacile.fr/jarvis/
+You: Vérifie mes emails
+Jarvis: Vous n'avez aucun email non lu
+```
+
+## Author
+[Alex](https://github.com/alexylem)
