@@ -10,12 +10,13 @@ For multi-language plugin:
 - optionally write the Description / Usage sections in several languages
 -->
 ## Description
-Tells you number of unread emails you have on your gmail account.
+Tells you number of unread emails you have on your gmail account, and who sent
+the last email.
 
 ## Usage
 ```
 You: Vérifie mes emails
-Jarvis: Vous avez 2 emails non lus
+Jarvis: Vous avez 2 emails non lus, le dernier est de Alex
 
 You: Vérifie mes emails
 Jarvis: Vous n'avez aucun email non lu
