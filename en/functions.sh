@@ -37,4 +37,5 @@ jv_pg_gmail () {
     else
         $gmail_say_no_new && say "You have no unread emails"
     fi
+    return 0
 }

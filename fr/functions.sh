@@ -37,4 +37,5 @@ jv_pg_gmail () {
     else
         $gmail_say_no_new && say "Vous n'avez aucun email non lu"
     fi
+    return 0
 }
