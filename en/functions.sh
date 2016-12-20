@@ -8,10 +8,12 @@ jv_pg_gmail () {
     local nb_unread=0
     local last_check="$(cat "$last_check_file" 2>/dev/null)"
     
+    $gmail_say_checking && say "I check..."
+    
     while jv_read_dom; do
         case "$ENTITY" in
             #fullcount) nb_unread="$CONTENT";;
-            H1)    echo "ERROR: $CONTENT"
+            H1)    jv_error "ERROR: $CONTENT"
                    return 1;;
             title) $first_entry && last_title="$CONTENT";;
             issued) issued="$CONTENT"
@@ -30,11 +32,9 @@ jv_pg_gmail () {
     done < <(curl -u $gmail_username:$gmail_password --silent "https://mail.google.com/mail/feed/atom")
     
     if [ "$nb_unread" -ne 0 ]; then
-        printf "You have $nb_unread unread emails"
-        $gmail_say_from && printf ", last one is from $last_from"
-        $gmail_say_title && printf ": $last_title"
-        echo
+        say "You have $nb_unread unread emails"
+        $gmail_say_from && say "last one if from $last_from$($gmail_say_title && echo ": $last_title")"
     else
-        $gmail_say_no_new && echo "You have no unread emails"
+        $gmail_say_no_new && say "You have no unread emails"
     fi
 }

@@ -18,6 +18,7 @@ Configuration options:
 - Say title of last unread email
 - Check only new unread emails from last check or all unread emails
 - Say when there is no unread emails
+- Say checking while retrieving emails
 
 ## Usage
 ```

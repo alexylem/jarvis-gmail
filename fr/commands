@@ -1,1 +1,1 @@
-*MAIL*==say "Je regarde..." && say "$(jv_pg_gmail)"
+*MAIL*==jv_pg_gmail
