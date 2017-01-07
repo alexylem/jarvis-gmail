@@ -31,11 +31,14 @@ jv_pg_gmail () {
         esac
     done < <(curl -u $gmail_username:$gmail_password --silent "https://mail.google.com/mail/feed/atom")
     
-    if [ "$nb_unread" -ne 0 ]; then
-        say "Ci sono $nb_unread email da leggere"
-        $gmail_say_from && say "L'ultima email è di $last_from$($gmail_say_title && echo ": $last_title")"
+    if [ "$nb_unread" -eq 1 ]; then
+        say "È presente una mail da leggere"
+        $gmail_say_from && say " di $last_from$($gmail_say_title && echo ": $last_title")"
+    elif [ "$nb_unread" -ne 0 ]; then
+        say "Ci sono $nb_unread mail da leggere"
+        $gmail_say_from && say "L'ultima mail è di $last_from$($gmail_say_title && echo ": $last_title")"
     else
-        $gmail_say_no_new && say "Non ci sono email da leggere"
+        $gmail_say_no_new && say "Non ci sono mail da leggere"
     fi
     return 0
 }
