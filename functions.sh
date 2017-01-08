@@ -31,7 +31,7 @@ jv_pg_gmail () {
         esac
     done < <(curl -u $gmail_username:$gmail_password --silent "https://mail.google.com/mail/feed/atom")
     
-    if [ "$nb_unread" -ne 1 ]; then
+    if [ "$nb_unread" -eq 1 ]; then
         say "$(jv_pg_gmail_lg you_have_x_unread_emails $nb_unread)"
         $gmail_say_from && say "$(jv_pg_gmail_lg last_one_is_from_x $last_from)$($gmail_say_title && echo ": $last_title")"
     elif [ "$nb_unread" -gt 1 ]; then
