@@ -13,6 +13,8 @@ For multi-language plugin:
 Tells you number of unread emails you have on your gmail account, and who sent
 the last email.
 
+Supported languages: Deutsch, English, Español, Français, Italiano
+
 Configuration options:
 - Say sender of last unread email
 - Say title of last unread email
