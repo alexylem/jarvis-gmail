@@ -1,5 +1,5 @@
 jv_pg_gmail () {
-    local last_check_file="/tmp/jarvis_gmail_last_check"
+    local last_check_file="$jv_cache_folder/jarvis_gmail_last_check"
     local last_from
     local in_entry=false
     local stop=false
